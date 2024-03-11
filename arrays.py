@@ -43,3 +43,9 @@ def max_product(arr):
     return max1 * max2
 arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 print(max_product(arr))
+
+# exclude the first and last elements from the list
+def middle(lst):
+    return lst[1:-1]
+list = [1,2,3,4,5,6,7]
+print(middle(list))
