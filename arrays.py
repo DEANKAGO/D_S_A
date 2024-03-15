@@ -49,3 +49,10 @@ def middle(lst):
     return lst[1:-1]
 list = [1,2,3,4,5,6,7]
 print(middle(list))
+
+# calculate the sum of diagonal elements in a 2D list
+def diagonal_sum(matrix):
+    total = 0
+    for i in range(len(matrix)):
+        total += matrix[i] [i]
+    return total
