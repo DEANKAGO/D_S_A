@@ -65,5 +65,8 @@ def first_second(my_list):
         if number > bst1:
             bst2 = bst1
             bst1 = number
+        elif number > bst2 and number != bst1:
+            bst2 = number
+            
     return bst1, bst2
 print (first_second(myList))
