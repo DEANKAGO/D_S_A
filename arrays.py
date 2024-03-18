@@ -56,3 +56,14 @@ def diagonal_sum(matrix):
     for i in range(len(matrix)):
         total += matrix[i] [i]
     return total
+
+#  Write a function to get first, second best scores from the list
+myList = [84,85,86,87,85,90,85,83,23,45,84,1,2,0]
+def first_second(my_list):
+    bst1, bst2 = 0, 0
+    for number in my_list:
+        if number > bst1:
+            bst2 = bst1
+            bst1 = number
+    return bst1, bst2
+print (first_second(myList))
