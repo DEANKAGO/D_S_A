@@ -70,3 +70,16 @@ def first_second(my_list):
             
     return bst1, bst2
 print (first_second(myList))
+
+# function to remove duplicates on given integer array/list
+def remove_duplicates(arr):
+    new_arr = []
+    seen = set()
+    for i in arr:
+        if i not in seen:
+            new_arr.append(i)
+            seen.add(i)
+    return new_arr
+
+my_arr = [1, 1, 2, 2, 3, 4, 5, 6, 7]
+print(remove_duplicates(my_arr))
