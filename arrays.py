@@ -25,6 +25,9 @@
 #         above += 1
 # print(str(above) + " day(s) above average")
 
+from numpy import matrix
+
+
 def missing_number(arr, n):
     total = n * (n + 1) /2
     sum_arr = sum(arr)
@@ -124,3 +127,22 @@ def permutation(list1, list2):
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(permutation(list1, list2))
+
+# You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+def rotate(matrix):
+    for row in range(len(matrix)):
+        for col in range(row, len(matrix)):
+            # print("row==>", row)
+            # print("col==>", col)
+            # print("matrix[row][col]====>", matrix[row][col])
+            # print("matrix[col][row]====>", matrix[col][row])
+            # print("matrix before====>", matrix)
+            matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]
+    #         print("matrix after====>", matrix)
+    #         print("================================================")
+    for row in matrix:
+        row.reverse()
+    return matrix
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(rotate(matrix))
