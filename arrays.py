@@ -96,3 +96,17 @@ def pair_sum(arr, target_sum):
 arr = [2, 4, 3, 5, 6, -2, 4, 7, 8, 9]
 target_sum = 7
 print(pair_sum(arr, target_sum))
+
+# Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+def contains_dublicate(nums):
+    new_arr = []
+    seen = set()
+    for i in nums:
+        if i in seen:
+            return True
+        else:
+            seen.add(i)           
+    return False
+
+nums = [1, 2, 3, 2]
+print(contains_dublicate(nums))
