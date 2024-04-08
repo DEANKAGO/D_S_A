@@ -99,7 +99,6 @@ print(pair_sum(arr, target_sum))
 
 # Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 def contains_dublicate(nums):
-    new_arr = []
     seen = set()
     for i in nums:
         if i in seen:
@@ -110,3 +109,18 @@ def contains_dublicate(nums):
 
 nums = [1, 2, 3, 2]
 print(contains_dublicate(nums))
+
+# permutation
+def permutation(list1, list2):
+    if len(list1) != len(list2):
+        return False
+    list1.sort()
+    list2.sort()
+    if list1 == list2:
+        return True
+    else:
+        return False
+
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(permutation(list1, list2))
