@@ -83,3 +83,16 @@ def remove_duplicates(arr):
 
 my_arr = [1, 1, 2, 2, 3, 4, 5, 6, 7]
 print(remove_duplicates(my_arr))
+
+# function to find pair sum in an array
+def pair_sum(arr, target_sum):
+    pair = []
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            if arr[i] + arr[j] == target_sum:
+                pair.append(f"{arr[i]}+{arr[j]}")
+    return pair
+
+arr = [2, 4, 3, 5, 6, -2, 4, 7, 8, 9]
+target_sum = 7
+print(pair_sum(arr, target_sum))
