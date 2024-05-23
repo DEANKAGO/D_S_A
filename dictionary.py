@@ -15,8 +15,19 @@ eng_sp3 = dict(eng_sp_list)
 print(eng_sp3)
 
 # Traversing through a dictionary
-my_dict = {'name': 'Kago', 'age': '20', 'address': 'Kenya'}
+my_dict = {'name': 'Kago', 'age': 20, 'address': 'Kenya'}
 def traverseDict(dict):
     for key in dict:
         print(key, dict[key])
 traverseDict(my_dict)
+
+# Search for an element in a dictionary
+myDict = {'name': 'Kago', 'age': 20, 'address': 'Kenya'}
+
+def searchDict(dict, value):
+    for key in dict:
+        if dict[key] == value:
+            return key, value
+    return 'Value does not exist'
+
+print(searchDict(myDict, 20))
